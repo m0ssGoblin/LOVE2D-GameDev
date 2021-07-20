@@ -39,8 +39,6 @@ function love.draw()
     diagnostics()
 end
 
-
-
 --Game Functions
 
 
@@ -50,8 +48,11 @@ end
 
 function drawPlant(y)
     love.graphics.rectangle( "fill", screenW / 2 - stemW, screenH - groundH - stemH - y, stemW, stemH + y)
-    if plantHeight > 10 then
-        addLeaf(10)
+    node = {10,20}
+    if plantHeight > node[1] then
+        addLeaf("right", node[2])
+    elseif plantHeight >node[2] then
+        addLeaf("right", node[2])
     end    
 end
 
@@ -63,15 +64,19 @@ function grow()
     end
 end
 
-function addLeaf(y)
+function addLeaf(side, y)
     leafStemL = 8
     leafStemW = 2
 
     leafW = 4
     leafL = 8
 
-    love.graphics.rectangle("fill", screenW / 2 + stemW / 2 - 2,             screenH - groundH - y,                 leafStemL, leafStemW)
-    love.graphics.rectangle("fill", screenW / 2 + stemW / 2 + leafStemL - 1, screenH - groundH - y - leafW / 2 + 1, leafL,     leafW)
+    if side == "right" then 
+        love.graphics.rectangle("fill", screenW / 2 + stemW / 2 - 2,             screenH - groundH - y,                 leafStemL, leafStemW)
+        love.graphics.rectangle("fill", screenW / 2 + stemW / 2 + leafStemL - 1, screenH - groundH - y - leafW / 2 + 1, leafL,     leafW)
+    else love.graphics.rectangle("fill", screenW / 2 - stemW / 2 - leafStemL - 2,    screenH - groundH - y,                 leafStemL, leafStemW)
+        love.graphics.rectangle("fill", screenW / 2 - stemW / 2 - leafStemL - leafL -2, screenH - groundH - y - leafW / 2 -1, leafL, leafW )
+    end
 end
 
 
