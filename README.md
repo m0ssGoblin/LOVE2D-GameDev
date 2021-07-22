@@ -9,6 +9,9 @@ An SDK for the playdate will likley be released sometime after july 2021.
 In th emeantime, many of the lessons learned with LOVE2D are liekly to translate to the playdate.
 
 
+
+|---------   GROW   ------------|
+
 Much of this Repo is tutorials or source code but the *Grow* project is an original creation. 
 Grow is more simulation than game and has the player take more of an observational role as a small plot of land becomes inhabitted by organisms. 
 
