@@ -14,7 +14,7 @@ function plant:load()
     self.y = love.graphics.getHeight() - groundH - stemH
     self.height = 0
     self.width = 3
-    self.nodepositions ={10}
+    self.nodepositions ={10, "bean",.5}
     self.internode = 10
     self.terminalGrowth = 300
 
@@ -22,7 +22,6 @@ end
 
 function plant:update()
     plant:growStem()
-    plant:addLeaves()
 end
 
 function plant:draw()
@@ -32,7 +31,6 @@ end
 
 function drawPlant()
     plant:drawStem()
-    plant:drawLeaf()
 end
 
 
@@ -58,16 +56,15 @@ function plant:growStem()
     end
 end
 
+
+-- under construction
+
 function plant:addLeaves()
     if self.height > nodeLog + self.internode then
         nodeLog = self.height
         table.insert(nodepositions, self.height)
     end
 end
-
-
-
-
 function plant:drawLeaf()
 
         side = math.random(2)

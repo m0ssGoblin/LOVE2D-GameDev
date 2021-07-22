@@ -2,6 +2,7 @@
 -- Initialize the startup time variables
 
 require("plant")
+require("sun")
 
 startTime = 0
 loggedTime = 0
@@ -26,10 +27,12 @@ function love.load()
     screenH = love.graphics.getHeight()
 
     plant:load()
+    sun:load()
 end
 
 function love.update(dt)
     plant:update()
+    sun:update()
 end
     
 
@@ -38,6 +41,7 @@ function love.draw()
     drawGround()
 
     plant:draw()
+    sun:draw()
 end
 
 --Game Functions
@@ -52,12 +56,12 @@ end
 
 --Other Functions
 
-currentNode = plant.nodepositions[0]
+--currentNode = plant.nodepositions[1]
 
 function diagnostics()
     love.graphics.print("Time Elapsed: " .. os.time() - startTime , 10, 10)
     love.graphics.print(screenW .. " x " .. screenH, 10, 20)
     love.graphics.print("Plant Height: " .. plant.height, 10, 30)
     love.graphics.print("Plant Width: " .. plant.width, 10, 40)
-    love.graphics.print("Node Positions: " .. currentNode, 10, 50)
+    --love.graphics.print("Node Positions: " .. currentNode, 10, 50)
 end
