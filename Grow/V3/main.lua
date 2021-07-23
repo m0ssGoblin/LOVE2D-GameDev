@@ -6,8 +6,8 @@ require("sun")
 require("time")
 
 
-WINDOW_W = 400
-WINDOW_H = 240
+WINDOW_W = 800
+WINDOW_H = 480
 
 groundH = WINDOW_H * .2
 
@@ -26,7 +26,6 @@ function love.update(dt)
     plant:update(dt)
     sun:update(dt)
     deltaT = dt
-    sun:Colorizer()
 end
     
 
@@ -53,19 +52,33 @@ end
 
 --currentNode = plant.nodepositions[1]
 
-function diagnostics()
-    love.graphics.setFont(love.graphics.newFont(9))
-    love.graphics.print("Time Elapsed: " .. time.elapsed , 10, 10)
-    love.graphics.print(WINDOW_W .. " x " .. WINDOW_H, 10, 20)
-    love.graphics.print("Plant Height: " .. math.floor(plant.height), 10, 30)
-    love.graphics.print("Plant Width: " .. plant.width, 10, 40)
-    --love.graphics.print("Node Positions: " .. currentNode, 10, 50)
-    love.graphics.print("deltaT: " .. deltaT, 10, 50)
-    love.graphics.print("FPS: " .. love.timer.getFPS(), 10, 60)
 
-    love.graphics.print("Sun Radius: " ..  math.floor(sun.radius), 10, 100)
-    love.graphics.print("Time of Day: " .. 6 + (time.elapsed/WINDOW_W)*12, 10, 110)
-    love.graphics.print("Day Count: " .. daysElapsed, 10, 120)
+
+    -- love.graphics.print("Plant Width: " .. plant.width, 10, 40), 
+    -- love.graphics.print("deltaT: " .. deltaT, 10, 50), 
+    -- love.graphics.print("FPS: " .. love.timer.getFPS(), 10, 60), 
+    -- love.graphics.print("Sun Radius: " ..  math.floor(sun.radius), 10, 100), 
+
+
+function diagnostics()
+    
+    diagnosticLines = { 
+        "Window: " ..WINDOW_W .. " x " .. WINDOW_H,
+        "Time Elapsed: ".. time.elapsed, 
+        "Plant Height: " .. math.floor(plant.height), 
+        "Time of Day: " .. 6 + (time.elapsed/WINDOW_W)*12,
+        "Days: " .. daysElapsed, 
+        "#Leaves: ".. plant.numberOfLeaves,
+        "Blooming? " .. plant.blooming, 
+
+
+        --"NextNode: " .. plant.nextNode, 
+        }
+
+    love.graphics.setFont(love.graphics.newFont(9))
+    for i = 1,table.getn(diagnosticLines) do
+        love.graphics.print(diagnosticLines[i], 10, i * 10)
+    end
 end
 
 
