@@ -4,6 +4,8 @@
 require("plant")
 require("sun")
 require("time")
+require("grass")
+require("experiment")
 
 
 WINDOW_W = 800
@@ -17,6 +19,7 @@ groundH = WINDOW_H * .2
 function love.load()
     time:load()
     plant:load()
+    grass:load()
     sun:load()
     love.window.setMode(WINDOW_W, WINDOW_H)
 end
@@ -26,14 +29,17 @@ function love.update(dt)
     plant:update(dt)
     sun:update(dt)
     deltaT = dt
+    grass:update(dt)
 end
     
 
 function love.draw()
     sun:draw()
     plant:draw()
+    grass:draw()
     diagnostics()
     drawGround()
+    experiment:draw()
 
 end
 

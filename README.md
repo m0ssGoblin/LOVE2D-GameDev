@@ -23,20 +23,24 @@ Also unlike real-life players will have limitted control of the plot. Seeds will
 
 Planned features 
 
-Day night cycle   -     .25 
-plant growth      -     .1
-  tie to weather  -     0
-rain              -     0
-clouds            -     0
-plant spp.        -     0
+Day night cycle           -   0.25 
+Chose Setting/Background  -   0
+  alter wind-blowns 
+    seeds
+    creatures
+plant growth              -   0.1
+  tie to weather          -   0
+rain                      -   0
+clouds                    -   0
+plant spp.                -   0
   -sunflower
   -fern
   -mushroom
-other creatures   -     0
+other creatures           -   0
   -bee
   -ladybug
   -ant
-start menu        -     0
-inventory         -     0
+start menu                -   0
+inventory                 -   0
   -seeds
-UI (plant date)   -     0
+UI (plant date)           -   0
