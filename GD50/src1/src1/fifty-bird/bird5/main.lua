@@ -116,7 +116,7 @@ function love.update(dt)
     spawnTimer = spawnTimer + dt
 
     -- spawn a new Pipe if the timer is past 2 seconds
-    if spawnTimer > 2 then
+    if spawnTimer > 0.1 then
         table.insert(pipes, Pipe())
         print('Added new pipe!')
         spawnTimer = 0
