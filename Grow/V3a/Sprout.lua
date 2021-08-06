@@ -10,7 +10,7 @@ function Sprout:init(x, growthRate, maxH)
     self.growthRate = growthRate
     self.maxH = maxH
     self.birthTime = os.time()
-    self.maxAge = 20
+    self.maxAge = 100
     self.age = 0
     numberOfSprouts = numberOfSprouts + 1
 end

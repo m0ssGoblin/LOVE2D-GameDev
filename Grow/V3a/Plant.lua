@@ -14,7 +14,6 @@ function plant:load()
     self.x = love.graphics.getWidth() / 2 - self.width
     self.y = love.graphics.getHeight() - groundH - self.height
 
-    
     self.internode = 10
     self.terminalGrowth = 150
 
@@ -31,11 +30,10 @@ function plant:load()
 
     self.flowerInnerRadius = 4
     self.flowerOutterRadius = 6
-    
+
     self.bloomSize = 25
 
-    self.bloomPoint = .85
-
+    self.bloomPoint = 0.85
 end
 
 function plant:update(dt)
@@ -53,7 +51,6 @@ end
 function plant:drawStem()
     love.graphics.rectangle( "fill", self.x, self.y, self.width, self.height)
 end
-
 
 function plant:growStem(dt)
     if self.height < self.terminalGrowth then 

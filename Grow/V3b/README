@@ -1,0 +1,24 @@
+
+
+
+V3a
+    This is an experimental build to test 
+        -main menu functionality
+        -for loop based procedural generation 
+
+V3b
+
+    This update will focus on the core mechanic of this game which is winding time back and forward using the original sunflower plant.
+    In order to accomplish this, instatiation and removal of any plant will need to be logged. 
+
+    when a player move time backward the state of the game will have to change 
+
+
+States
+    -menuStart 
+    -play_realTime
+    -play_timeScrub
+    -inventory
+    -menuPause
+
+

@@ -21,6 +21,28 @@ Unlikle real-life this will give the user a chance to watch their plants grow an
 Also unlike real-life players will have limitted control of the plot. Seeds will "blow-in" to the players inventory and they may chose to plant them or not. 
 
 
+
+
+core loop 
+time scrubbing, manipulation, appreciation. 
+
+
+
+states
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Planned features 
 
 Day night cycle           -   0.25 
