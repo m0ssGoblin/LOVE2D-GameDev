@@ -1,0 +1,23 @@
+ implemented
+
+ -Switching from time scrubbing state to real time 
+    -In scrub time the player is able to move backward and forward (up to the present)
+    -Time will tick forward when the player stops scrubbing in order to have a sense of activity
+-Creating a log file which stores the real time elapsed and automatically reloads when the player begins a new session
+
+
+
+
+
+ To Implement 
+ -loggin the time since the save slot was created
+ -instatiating and de-instatiating entities as a function of time. 
+
+
+
+PSEUDO CODE / THINKING
+ -> all entities will contain an implict growth function which ultimately dictates their time of death 
+    -> although the birth time is stochastic their death is pre-determined by time. 
+        -> modifications to that growth function can be made in -game which alters the time of death 
+ -> a for loop can check if the current scrub time is equal to any of the instantiation times and spawn plants if so 
+
