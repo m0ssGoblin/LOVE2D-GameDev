@@ -27,6 +27,7 @@ function love.load()
     if not love.filesystem.getInfo("timelog.lua")then --if no time log file is found
         timeElapsed = 0 --set the timElapsed to 0
         love.filesystem.newFile("timelog.lua")  --create a new time log file 
+        loggedTime = 0
     else --If the timeLog file is found then use the value stored in it to set loggedTime equal to that time so we can use it later.
         loggedTime = love.filesystem.read("timeLog.lua")
     end
@@ -37,15 +38,7 @@ function love.update(dt)
     sprout:update(dt)
     currentTime = os.time()
 
-    if state == "Real Time" then
-        timeElapsed = loggedTime + currentTime - startTime
-        playerTime = timeElapsed        
-    end  
-
-    if state == "Scrub Time" then
-        Scrubber(key)
-        playerTime = loggedTime + currentTime - startTime + timeScrub
-    end
+    StateMachine()
 
     stateSelector()
 
@@ -134,5 +127,18 @@ function stateSelector()
     if newFile then
         love.filesystem.write("timelog.lua", 0) 
         love.event.quit('restart')
+    end
+end
+
+function StateMachine()
+    
+    if state == "Real Time" then
+        timeElapsed = loggedTime + currentTime - startTime
+        playerTime = timeElapsed        
+    end  
+
+    if state == "Scrub Time" then
+        Scrubber(key)
+        playerTime = loggedTime + currentTime - startTime + timeScrub
     end
 end
