@@ -12,7 +12,7 @@ function love.load()
     Player:load()
 end
 
-function love.update (dt)    
+function love.update (dt)
     World:update(dt)
 
     Player:update(dt)
@@ -24,10 +24,14 @@ function love.draw()
     Map:draw(0,0,2,2)
     love.graphics.push()
     love.graphics.scale(2,2)
-    
+
     Player:draw()
 
     love.graphics.pop()
+end
+
+function love.keypressed(key)
+  Player:jump(key)
 end
 
 function beginContact(a, b, collision)
