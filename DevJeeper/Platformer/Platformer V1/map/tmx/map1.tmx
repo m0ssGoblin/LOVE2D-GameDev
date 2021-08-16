@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:DevJeeper/Platformer/map1.tmx
 <map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="37">
  <editorsettings>
   <export target="Platformer V1/assets/Map1.lua" format="lua"/>
+=======
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <editorsettings>
+  <export target="../map1..lua" format="lua"/>
+>>>>>>> 079fe085402f7cf388ae2296cf2d5e8115bee9ce:DevJeeper/Platformer/Platformer V1/map/tmx/map1.tmx
  </editorsettings>
  <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="663" columns="51">
-  <image source="Platformer V1/assets/tiles.png" width="816" height="208"/>
+  <image source="../../assets/tiles.png" width="816" height="208"/>
  </tileset>
+<<<<<<< HEAD:DevJeeper/Platformer/map1.tmx
  <layer id="1" name="ground" width="40" height="23">
+=======
+ <layer id="1" name="Ground" width="40" height="23">
+>>>>>>> 079fe085402f7cf388ae2296cf2d5e8115bee9ce:DevJeeper/Platformer/Platformer V1/map/tmx/map1.tmx
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -84,7 +94,17 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,526,527,527,527,528,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+<<<<<<< HEAD:DevJeeper/Platformer/map1.tmx
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+=======
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,387,387,387,387,387,387,387,387,387,387,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+131,132,133,133,133,133,133,133,133,133,133,133,130,131,132,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,
+182,183,184,184,184,184,184,184,184,184,184,184,181,182,183,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,
+234,235,235,235,235,235,235,235,235,235,235,235,235,235,235,235,235,235,232,232,232,232,232,232,232,232,232,232,232,233,234,235,232,233,234,232,232,232,232,233
+>>>>>>> 079fe085402f7cf388ae2296cf2d5e8115bee9ce:DevJeeper/Platformer/Platformer V1/map/tmx/map1.tmx
 </data>
  </layer>
  <objectgroup color="#ffff00" id="4" name="solid" offsetx="5.68434e-14" offsety="1.33333">
